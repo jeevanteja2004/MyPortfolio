@@ -107,11 +107,7 @@
   opacity: 0.7;
   
 }
-.card-container:hover{
-  border-width: 10px;
-  transition: 0.2s;
- 
-}
+
 .username-password {
   height: 50%;
 }
