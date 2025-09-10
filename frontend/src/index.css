@@ -330,6 +330,7 @@
 }
 .my-name{
   font-weight: 600;
+  color:white;
 }
 .my-name{
   margin-top: 10px;
@@ -367,7 +368,7 @@
     font-weight: bold;
   }
   .nav-bar {
-    width: 95%;
+    width: 85%;
     height: 60px;
     padding-right: 0%;
 
