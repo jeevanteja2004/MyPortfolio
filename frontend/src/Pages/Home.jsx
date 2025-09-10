@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useRef } from "react";
 
 import react from "../assets/react.svg"
 import meee from "../assets/meee.png"
@@ -17,8 +17,17 @@ function Home() {
     const hambergerIconFunction = () => {
         setToggleHambarger(!toggleHambarger)
     }
+     
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef=useRef(null);
+  const projectRef=useRef(null);
+  const contactRef=useRef(null);
+  const scrollToSection = (elementRef) => {
+    elementRef.current.scrollIntoView({ behavior: "smooth" });
+  };
     return (
-        <div style={{ backgroundColor: 'black', position: 'relative', display: 'flex', flexDirection: 'column' }} className="w-full">
+        <div style={{ backgroundColor: 'black', position: 'relative', display: 'flex', flexDirection: 'column' }} className="w-full" ref={homeRef}>
             <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
                 <Particles
                     particleColors={['#ffffff', '#ffffff']}
@@ -31,41 +40,48 @@ function Home() {
                     disableRotation={false}
                 />
             </div>
-            <nav style={{ position: 'absolute',zIndex:"100"}} className="nav-bar navbar">
+            <nav style={{ zIndex:"10000",position:'fixed'}} className="nav-bar navbar">
                 <img src={react} className="nav-img" />
                 
 
                 
                 <ol className="ol-items">
-                    <li><ShinyText
+                    <li onClick={() => scrollToSection(homeRef)}>
+                         
+                        <ShinyText
                         text="Home"
                         disabled={false}
                         speed={3}
                         className='custom-class  nav-li-items nav-btns'
                     />
+                    
                     </li>
-                    <li><ShinyText
+                    <li onClick={() => scrollToSection(aboutRef)}> 
+                        <ShinyText
                         text="About"
                         disabled={false}
                         speed={3}
                         className='custom-class  nav-li-items nav-btns'
                     />
+                    
                     </li>
-                    <li><ShinyText
+                    <li onClick={() => scrollToSection(skillsRef)}>
+                        <ShinyText
                         text="Skills"
                         disabled={false}
                         speed={3}
                         className='custom-class  nav-li-items nav-btns'
                     />
+                    
                     </li>
-                    <li><ShinyText
+                    <li onClick={() => scrollToSection(projectRef)}><ShinyText
                         text="Projects"
                         disabled={false}
                         speed={3}
                         className='custom-class  nav-li-items nav-btns'
                     />
                     </li>
-                    <li><ShinyText
+                    <li onClick={() => scrollToSection(contactRef)}><ShinyText
                         text="ContactMe"
                         disabled={false}
                         speed={3}
@@ -91,7 +107,7 @@ function Home() {
                     <div className={`sidebar slide-container`} style={{zIndex:"1000"}}>
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF" onClick={hambergerIconFunction}><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
                         <ol className="ol-items side-nav-bar">
-                            <li><ShinyText
+                            <li onClick={() => scrollToSection(homeRef)}><ShinyText
                                 text="Home"
                                 disabled={false}
                                 speed={3}
@@ -99,7 +115,7 @@ function Home() {
                             />
                             </li>
                             <hr style={{ width: "200%" }}></hr>
-                            <li><ShinyText
+                            <li onClick={() => scrollToSection(aboutRef)}><ShinyText
                                 text="About"
                                 disabled={false}
                                 speed={3}
@@ -107,7 +123,7 @@ function Home() {
                             />
                             </li>
                             <hr style={{ width: "200%" }}></hr>
-                            <li><ShinyText
+                            <li onClick={() => scrollToSection(skillsRef)}><ShinyText
                                 text="Skills"
                                 disabled={false}
                                 speed={3}
@@ -115,7 +131,7 @@ function Home() {
                             />
                             </li>
                             <hr style={{ width: "200%" }}></hr>
-                            <li><ShinyText
+                            <li onClick={() => scrollToSection(projectRef)}><ShinyText
                                 text="Projects"
                                 disabled={false}
                                 speed={3}
@@ -123,7 +139,7 @@ function Home() {
                             />
                             </li>
                             <hr style={{ width: "200%" }}></hr>
-                            <li><ShinyText
+                            <li onClick={() => scrollToSection(contactRef)}><ShinyText
                                 text="ContactMe"
                                 disabled={false}
                                 speed={3}
@@ -160,6 +176,7 @@ function Home() {
                     threshold={0.1}
                     rootMargin="-100px"
                     textAlign="center"
+                   
 
                 />
                 <h1 style={{ color: "red", marginTop: "10px", fontSize: "30px", textAlign: "Center", fontWeight: "bold" }} className="slide-text">Full Stack Developer</h1>
@@ -173,7 +190,7 @@ function Home() {
                         className="c home-para josefin-sans"
                     />
                 </div>
-                <div style={{ display: "flex", backgroundColor: "", width: "60%", justifyContent: "space-around", alignSelf: "center", marginTop: "20px" }} className="x">
+                <div style={{ display: "flex", backgroundColor: "", justifyContent: "space-around", alignSelf: "center", marginTop: "20px" }} className="x">
                     <button style={{ backgroundColor: "#dae2e7ff", borderRadius: "50%", width: "45px", height: "45px", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }} className="round-btn">
                         <i class="bi bi-linkedin" style={{ fontSize: "20px" }}></i>
                     </button>
@@ -202,9 +219,15 @@ function Home() {
 
                 </div>
             </div>
+            <section ref={aboutRef}>
             <About/>
+            </section>
+            <section ref={skillsRef}> 
             <Skills/>
-            <Projects/>
+            </section>
+            <section ref={projectRef}>
+            <Projects />
+            </section>
         </div>
         
     )

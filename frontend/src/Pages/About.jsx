@@ -44,19 +44,19 @@ function About() {
                     <div class="notification block">
                         <div class="notiglow"></div>
                         <div class="notiborderglow"></div>
-                        <div class="notititle">Vishnu institute oftechnology <span className="span-edu">2021-2025</span></div>
+                        <div class="notititle">Vishnu institute of technology <span className="span-edu">2021-2025</span></div>
                         <div class="notibody">Bachelor of Technology <br></br>Electronics & Communication Engineering <br></br> (7.6 CGPA)</div>
                     </div>
                     <div class="notification block">
                         <div class="notiglow"></div>
                         <div class="notiborderglow"></div>
-                        <div class="notititle">Sri Chaitanya junior college <span className="span-edu">2021-2025</span></div>
+                        <div class="notititle">Sri Chaitanya junior college <span className="span-edu">2019-2021</span></div>
                         <div class="notibody">Intermediate <br></br> MPC <br></br> (72.4%)</div>
                     </div>
                     <div class="notification block">
                         <div class="notiglow"></div>
                         <div class="notiborderglow"></div>
-                        <div class="notititle">Bhashyam high school <span className="span-edu">2021-2025</span></div>
+                        <div class="notititle">Bhashyam high school <span className="span-edu">2018-2019</span></div>
                         <div class="notibody">Secondary School Of Certificate <br></br>(9.7 CGPA)
 </div>
                     </div>

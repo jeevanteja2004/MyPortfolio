@@ -188,6 +188,10 @@
   .about-text{
     margin-top: 10px;
   }
+  
+  .skills-type-button{
+    width:30%;
+  }
 }
 
 .skills-container{

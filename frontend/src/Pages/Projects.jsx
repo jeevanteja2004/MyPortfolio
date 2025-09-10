@@ -73,7 +73,7 @@ function Projects() {
 
 
             </div>
-            <div className="projects-display-container" style={{ zIndex: 10000 }}>
+            <div className="projects-display-container" style={{ zIndex: 1000 }}>
                 {projects.filter(e => e.type === project).map(each => {
                     return (
 
