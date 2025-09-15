@@ -4,13 +4,13 @@ import Particles from "../Particles";
 import "./Projects.css"
 import Emojigame from "../assets/Emojigame.png"
 import PasswordManager from "../assets/PasswordManager.png"
-import coinToss from "../assets/coinToss.png"
+
 import jobbyApp from "../assets/jobbyApp.png"
 import Resort from "../assets/Resort.png"
 import moneyManager from "../assets/moneyManager.png"
 import nxtTrandz from "../assets/nxtTrandz.png"
 import nxtWatch from "../assets/nxtWatch.png"
-import speedtyping from "../assets/speedtyping.png"
+
 
 const projects = [
 
@@ -78,7 +78,7 @@ function Projects() {
                     return (
 
 
-                        <div class={`card-container ${["NxtTrandz","JobbyApp"].includes(each.name)&& `username-password`}`}>
+                        <div class={`card-container ${["NxtTrandz","JobbyApp"].includes(each.name)&& `username-password`} block`}>
                             <div class="image_container">
 
                                 <img src={each.displayImg} style={{ height: "100%", width: "100%" }} />

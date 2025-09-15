@@ -1,0 +1,115 @@
+.image-zoom {
+  width: 40%; /* adjust size */
+  height: auto;
+  animation: zoomInOut 5s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* zoom in */
+  }
+  100% {
+    transform: scale(1);   /* zoom out */
+  }
+}
+
+.form-with-img{
+  
+    height: 70vh;
+    width:70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    
+}
+.form{
+    height:90%;
+    width: 35%;
+     
+  
+  background-color: #2d577780;
+ 
+  padding:25px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 0.1px solid rgb(120, 127, 162);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input-name{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:16%;
+    width: 100%;
+}
+.input-name-placeholder{
+    border-width: 1px;
+    border-color: #ffffff;
+    height: 90%;
+    margin-top: 2px;
+    border-radius: 5px;
+     padding: 5px;
+     color: floralwhite;
+
+}
+label{
+    color: #ffffff;
+    font-size: 15px;
+}
+.text-area {
+   /* optional: prevent manual resize */
+   
+   display: flex;
+  
+   flex-direction: column;
+   justify-content: space-between;
+   height: 200px;
+}
+.text{
+    height: 85%;
+    border-color: #ffffff;
+    color: floralwhite;
+    padding: 5px;
+   border-width: 1px;
+   border-radius: 6px;
+}
+.form-btn{
+    border:2px solid rgb(60, 55, 45);
+    width: 100%;
+    height:10%;
+    color:#ffffff;
+    background-color: rgb(155, 155, 214);
+    border-radius: 5px;
+}
+@media (max-width:768px){
+    .image-zoom{
+        display: none;
+    }
+    .form-with-img{
+        width: 90%;
+        
+    }
+    .form{
+        width: 100%;
+    }
+}
+.jj{
+    color:white;
+    background-color: pink;
+    font-size: 40px;
+}

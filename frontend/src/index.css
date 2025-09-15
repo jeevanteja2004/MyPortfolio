@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 .particles-container {
   position: relative;
   width: 100%;
@@ -54,7 +53,6 @@
   border-radius: 13px;
   border-width: 1px;
   border-color: rgb(77, 75, 75);
-
 }
 
 .ol-items-auth:hover {
@@ -216,7 +214,7 @@
   font-size: 18px;
   align-self: center;
   text-align: "Center";
-  color: "white";
+  
   margin-top: "10px"
 }
 
@@ -232,7 +230,7 @@
 .josefin-sans {
   margin-top: 10px;
   font-family: sans-serif;
-  color:"white";
+
   font-weight: 500;
 
 }
@@ -356,6 +354,7 @@
 .home-btn{
   background-color: #1250ad;
 }
+
 @media (max-width:768px) {
   .nav-img {
     display: none;
@@ -384,10 +383,11 @@
   }
 
   .sidebar {
-    width: 50%;
+    width: 60%;
     margin-top: 598px;
-    background-color: #ba0808;
+    background-color: #083732f7;
     z-index: 1000;
+    font-size: 30px;
 
   }
 
@@ -414,7 +414,31 @@
   .slide-image{
     
   }
-
+  .hide-mobile{
+    display: none;
+  }
+  .clerk-mobile-view{
+   
+  }
+  .clerk-mobile-btn{
+ margin-top: 20px;
+    font-size: 20px;
+    border-width: 1px;
+    width: 60%;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: #7ea498;
+  }
+  .clerk-account{
+    display: flex;
+    flex-direction: column;
+   
+    font-size:15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 
 }
 
