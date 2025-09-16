@@ -1,10 +1,13 @@
-.about-text{
-    font-size: 30px;
+
+.about-text-dark{
+  font-size: 30px;
     font-weight: bold;
-    color:white;
+    
     text-align: center;
     justify-self: center;
-     color: #fff;
+ 
+    margin-top: 10px;
+      color: #fff;
   text-shadow: 
     0 0 5px #0ff,
     0 0 10px #0ff,
@@ -12,7 +15,23 @@
     0 0 40px #0ff,
     0 0 70px rgb(27, 240, 66),
     0 0 100px rgb(0, 255, 47);
+}
+.about-text-light{
+  font-size: 30px;
+    font-weight: bold;
+    
+    text-align: center;
+    justify-self: center;
+ 
     margin-top: 10px;
+      color: #fff;
+  text-shadow: 
+    0 0 5px rgb(206, 118, 55),
+    0 0 10px rgb(218, 163, 74),
+    0 0 20px rgb(210, 170, 95),
+    0 0 40px rgb(212, 170, 55),
+    0 0 70px rgb(176, 240, 27),
+    0 0 100px rgb(0, 255, 47);
 }
 .about-main-container{
   width: 100%;
@@ -79,7 +98,11 @@
 
   
 }
+.notification-light{
+  box-shadow: 0 0 10px 5px #d79313b3; 
+  --gradient: linear-gradient(to bottom, #ffea2e, #ffa13d, #ff7361);
 
+}
 .notification:before {
   position: absolute;
   content: "";
@@ -111,8 +134,11 @@
   font-size: 1.1rem;
   transition: transform 300ms ease;
   z-index: 5;
+  
 }
-
+.notititle-light{
+  color: #e98017;
+}
 .notification:hover .notititle {
   transform: translateX(0.15rem)
 }
@@ -175,6 +201,7 @@
 .hide-particles-two{
   display: none;
 }
+
 .x{
   width: 70%;
 }

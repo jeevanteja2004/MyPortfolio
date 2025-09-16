@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .skills-section{
     display: flex;
@@ -20,11 +21,17 @@
 .icon{
     height: 10px;
 }
+.dark-icon{
+  color: white;
+}
+.light-icon{
+  color: black;
+}
 .logo-scroll{
   
   margin-top: 20px;
  
-  color:#d2d4e5;
+  
   filter: drop-shadow(0 0 10px rgb(45, 218, 149) rgb(8, 216, 133))
   
 }

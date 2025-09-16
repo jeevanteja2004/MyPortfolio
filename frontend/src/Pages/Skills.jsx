@@ -17,6 +17,9 @@ import { FaGithub } from "react-icons/fa";
 import LogoLoop from '../Components/LogoLoop';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
 import Particles from "../Particles";
+import {useSelector} from "react-redux";
+import { changeThemeSwitch } from "../store/Slices/themeSwitcher";
+
 
 const skills = [
     { icon: <FaHtml5 />, name: "HTML5", color: "#E34F26", type: "front", value: 70 },
@@ -60,42 +63,18 @@ const imageLogos = [
 function Skills() {
     const [type, setType] = useState("front")
 
-
+    const theme = useSelector((state) => state.darkorlight.isDark);
     return (
-        <div className="skills-main-container">
-             <div style={{ width: '100%',height: '100vh', position:"absolute", backgroundColor: 'black',zIndex:0}}>
-                
-                <Particles
-                    particleColors={['#ffffff', '#ffffff']}
-                    particleCount={10000}
-                    particleSpread={30}
-                    speed={0.2}
-                    particleBaseSize={90}
-                    moveParticlesOnHover={false}
-                    alphaParticles={false}
-                    disableRotation={false}
-                    className="hide-particles"
-                />
-                <Particles
-                    particleColors={['#ffffff', '#ffffff']}
-                    particleCount={5000}
-                    particleSpread={30}
-                    speed={0.2}
-                    particleBaseSize={90}
-                    moveParticlesOnHover={false}
-                    alphaParticles={false}
-                    disableRotation={false}
-                    className="hide-particles-two"
-                />
-            </div>
-            <h1 className="about-text block" style={{ position: "relative", zIndex: 2000 }}>My Skills</h1>
+        <div className={`skills-main-container ${theme? "home-bg-dark" : "home-bg-light"}`} >
+            
+            <h1 className={`${theme ? "about-text-dark" : "about-text-light"}`} style={{ position: "relative", zIndex: 2000 }}>My Skills</h1>
 
             <div style={{position: "relative"}} className="skills-section">
 
                 <div className="type-btns block">
 
 
-                    <button class="skills-type-button" onClick={() => setType("front")}>
+                    <button class={`skills-type-button`} onClick={() => setType("front")}>
                         <span>FrontEnd</span>
                     </button>
                     <button class="skills-type-button" onClick={() => setType("back")}>
@@ -140,7 +119,8 @@ function Skills() {
 
                         
                         ariaLabel="Technology partners"
-                        className="logo-scroll"
+                        
+                        className={`logo-scroll ${theme ? "dark-icon" : "light-icon"}`}
                     />
                 </div>
 

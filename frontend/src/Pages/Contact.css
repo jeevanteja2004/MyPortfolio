@@ -1,3 +1,7 @@
+.contact-main-container{
+ height: 100vh;
+}
+
 .image-zoom {
   width: 40%; /* adjust size */
   height: auto;
@@ -30,14 +34,11 @@
     justify-content: space-around;
     margin-top: 50px;
     
+    
 }
 .form{
     height:90%;
     width: 35%;
-     
-  
-  background-color: #2d577780;
- 
   padding:25px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -48,7 +49,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+   background-color: #17558580;
+  border: 0.1px solid rgb(255, 255, 255);
+  z-index: 0;
 }
+.form-dark{
+  background-color: #17558580;
+  border: 0.1px solid rgb(255, 255, 255);
+}
+.swal2-container {
+  z-index: 9999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  height: 80%;
+  align-items: center;
+  
+}
+
 .input-name{
    
     display: flex;
@@ -67,6 +85,7 @@
      color: floralwhite;
 
 }
+
 label{
     color: #ffffff;
     font-size: 15px;
@@ -89,12 +108,16 @@ label{
    border-radius: 6px;
 }
 .form-btn{
-    border:2px solid rgb(60, 55, 45);
+    
     width: 100%;
     height:10%;
     color:#ffffff;
     background-color: rgb(155, 155, 214);
     border-radius: 5px;
+}
+.form-btn:hover{
+    cursor: pointer;
+    background-color:rgb(94, 94, 211) ;
 }
 @media (max-width:768px){
     .image-zoom{
@@ -108,8 +131,56 @@ label{
         width: 100%;
     }
 }
-.jj{
-    color:white;
-    background-color: pink;
-    font-size: 40px;
+.footer{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  height:17%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.scroll{
+  border: 1px solid rgb(228, 227, 223);
+  height: 25px;
+  width: 60px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.footer-icon{
+  width: 20%;
+}
+.light-line{
+ height: 30px;
+  width: 100%;
+  
+  color: #111111;
+}
+.dark-line{
+  height: 30px;
+  width: 100%;
+  
+  color: #ffffff;
+}
+.copy-dark{
+  color: rgb(247, 244, 244);
+}
+.copy-light{
+  color: rgb(6, 6, 6);   
+}
+@media (max-width:768px) {
+  .footer{
+    width: 100%;
+  }
+  .footer-icon{
+    width: 60%;
+    
+  }
 }

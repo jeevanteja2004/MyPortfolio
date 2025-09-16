@@ -4,6 +4,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 .nav-bar {
@@ -26,7 +27,18 @@
   border: 0.1px solid rgb(120, 127, 162);
   backdrop-filter: blur(10px);
 }
+.nav-bar-light{
+ background: linear-gradient(90deg, #5c64a2, #fd6e55);
+ backdrop-filter: blur(10px);
+color: white;
 
+}
+.my-img-dark{
+  background: #1097ff80;
+}
+.my-img-light{
+  background: #f0806c;
+}
 .ol-items {
   display: flex;
   width: 50%;
@@ -210,7 +222,7 @@
 }
 
 .c {
-  color: #ffffff;
+  
   font-size: 18px;
   align-self: center;
   text-align: "Center";
@@ -235,11 +247,11 @@
 
 }
 
-.rounde-btn {
+.round-btn-dark {
   border: none;
   background: #222;
   /* default dark bg */
-  color: #fff;
+  color: #000000;
   /* icon color */
   font-size: 24px;
   /* icon size */
@@ -250,7 +262,7 @@
   
 }
 
-.round-btn:hover {
+.round-btn-dark:hover {
   background: #1dd1a1;
   /* glowing bg */
   color: #1250ad;
@@ -261,7 +273,30 @@
     0 0 40px #084d6f;
   transform: scale(1.1);
 }
-
+.round-btn-light{
+   border: none;
+  background: #222;
+  /* default dark bg */
+  color: #201818;
+  /* icon color */
+  font-size: 24px;
+  /* icon size */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.round-btn-light:hover{
+  background: #d99065;
+  /* glowing bg */
+  color: #0e0322;
+  /* icon glow color */
+  box-shadow: 0 0 10px #caa881,
+    0 0 20px #ce9657,
+    0 0 40px #d08938,
+    0 0 40px #c89778;
+  transform: scale(1.1);
+}
 .shiny-text {
   color: #b5b5b5a4;
   /* Adjust this color to change intensity/style */
@@ -326,14 +361,12 @@
 .home-page{
   width: 40%;
 }
-.my-name{
-  font-weight: 600;
-  color:white;
-}
+
 .my-name{
   margin-top: 10px;
   font-size: 20px;
-  color:wheat;
+ 
+  font-weight: 600;
 }
 .two-btn-home{
   display: flex;
@@ -354,7 +387,40 @@
 .home-btn{
   background-color: #1250ad;
 }
-
+{/* Dark and Light Mode Styles */}
+.home-bg-dark{
+  background-color: black;
+}
+.home-bg-light{
+  background-color: rgb(255, 255, 255);
+}
+.my-name-dark{
+  color: #70829d;
+  font-family: 'cursive', sans-serif; 
+}
+.my-name-light{
+  color: #995757; /* Base text color */
+  font-family: 'cursive', sans-serif; 
+}
+.my-para-dark{
+  color: #af9f9f; /* Light gray for dark mode */
+  
+}
+.my-para-light{
+  color: #180400;
+  
+}
+.nav-bar-btns-light{
+  color:white
+}
+.home-btn-dark{
+  background: #272727;
+  color: white;
+}
+.home-btn-light{
+  background-color: #bc6a5c;
+  color: white;
+}
 @media (max-width:768px) {
   .nav-img {
     display: none;
@@ -397,12 +463,12 @@
    
   }
   .my-name{
-    font-weight: 00;
+    font-weight: 800;
   }
   .home-para{
     font-size: 17px;
-    color:white;
-    font-weight: 100;
+    
+    font-weight: 300;
   }
   .two-btn-home{
     width: 90%;
@@ -439,6 +505,7 @@
     align-items: center;
     margin-top: 20px;
   }
+  
 
 }
 
@@ -463,11 +530,16 @@
   content: "";
   position: absolute;
   inset: 1px;
-  background: #272727;
+  
   border-radius: 9px;
   transition: 0.5s;
 }
-
+.button-dark::before{
+  background: #4a4949;
+}
+.button-light::before{
+  background: #ec951b;
+}
 .button:hover::before {
   opacity: 0.7;
 }
@@ -486,3 +558,5 @@
 .button:hover:after {
   opacity: 1;
 }
+
+
