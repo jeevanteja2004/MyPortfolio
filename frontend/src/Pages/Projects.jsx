@@ -19,7 +19,7 @@ const projects = [
     { name: "Emoji Game", displayImg: Emojigame, livedemo: " https://emojigame334.ccbp.tech/ ", type: "frontend", techstack: ["HTML", "CSS", "React.js"] },
     { name: "Password Manager", displayImg: PasswordManager, livedemo: "https://passmanager334.ccbp.tech/", type: "frontend", techstack: ["HTML", "CSS", "React.js"] },
     { name: "Money Manager", displayImg: moneyManager, livedemo: "https://money334.ccbp.tech/", type: "frontend", techstack: ["HTML", "CSS", "React.js"] },
-    { name: "NxtTrandz", displayImg: nxtTrandz, livedemo: "", type: "frontend", techstack: ["HTML", "CSS", "React.js", "API", "Authentication"] },
+    { name: "NxtTrandz", displayImg: nxtTrandz, livedemo: "https://nxttrandz334.ccbp.tech/", type: "frontend", techstack: ["HTML", "CSS", "React.js", "API", "Authentication"] },
     { name: "JobbyApp", displayImg: jobbyApp, livedemo: "https://jobby334.ccbp.tech/login", type: "frontend", techstack: ["username:rahul", "password:rahul@2021", "HTML", "CSS", "React.js", "API", "Authentication"] },
     { name: "Resort Booking App", displayImg: Resort, livedemo: "https://holiday-resort-tau.vercel.app/", type: "fullstack", techstack: ["HTML", "CSS", "Next.js", "API", "Auth.js", "MongoDB", "NodeMailer"] },
     { name: "Nxt Watch", displayImg: nxtWatch, livedemo: "https://jeevan334watch.ccbp.tech", type: "frontend", techstack: ["HTML", "CSS", "React.js", "API", "Authentication"] }
